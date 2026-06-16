@@ -1,6 +1,6 @@
 # Adversarial Robustness — TML 2026, Assignment 3
 
-Trains a robust image classifier (ResNet-18) using **PGD adversarial training** to defend against adversarial attacks, as part of the Trustworthy Machine Learning 2026 course (CISPA Helmholtz Center).
+Trains a robust image classifier (ResNet-18) using **PGD adversarial training** to defend against adversarial attacks, as part of the Trustworthy Machine Learning 2026 course (CISPA).
 
 **Leaderboard score: 0.586** (clean accuracy ≈ 70%, robust accuracy ≈ 46%)
 
@@ -46,7 +46,7 @@ python3 submission.py
 
 **Method:** PGD adversarial training (Madry et al., 2018) — at every training step, adversarial examples are generated on-the-fly and the model is trained on those instead of clean images.
 
-**Architecture:** Stock `torchvision.models.resnet18`, with only the final `fc` layer replaced to output 9 classes. (Modifying `conv1`/`maxpool` for CIFAR-style input causes a shape mismatch when the evaluation server loads the state dict.)
+**Architecture:** Stock `torchvision.models.resnet18`, with only the final `fc` layer replaced to output 9 classes.
 
 **Key hyperparameters:**
 
@@ -69,6 +69,5 @@ The checkpoint with the best unified score (`0.5 × clean_accuracy + 0.5 × robu
 
 ## Files
 
-- `train_robust_fixed.py` — training script
+- `train_robust.py` — training script
 - `submission.py` — submits the trained model to the evaluation server
-- `report.pdf` — full report (approach, results, conclusion)
