@@ -1,10 +1,6 @@
 """
 Adversarial Training Script - Assignment 3: Robustness
-FIXED: Uses STOCK torchvision ResNet (7x7 conv1 + maxpool) to match
-server-side loading. Only the final fc layer is replaced for 9 classes.
-
-Input is 3x32x32 - the stock ResNet will downsample more aggressively
-but this is what the server expects.
+Uses STOCK torchvision ResNet (7x7 conv1 + maxpool). Only the final fc layer is replaced for 9 classes.
 """
 
 import numpy as np
