@@ -1,4 +1,4 @@
-# Adversarial Robustness — TML 2026, Assignment 3
+# Adversarial ML: Robustness TML 2026, Assignment 3
 
 Trains a robust image classifier (ResNet-18) using **PGD adversarial training** to defend against adversarial attacks, as part of the Trustworthy Machine Learning 2026 course (CISPA).
 
